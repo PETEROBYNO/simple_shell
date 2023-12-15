@@ -1,5 +1,4 @@
 #include "shs.h"
-
 /**
  * copy_info - copies info to create
  * a new env or alias
@@ -24,7 +23,6 @@ char *copy_info(char *name, char *value)
 
 	return (new);
 }
-
 /**
  * set_env_var - sets an environment variable
  *
@@ -57,7 +55,6 @@ void set_env_var(char *name, char *value, shell_data *shdata)
 	shdata->_environ[i] = copy_info(name, value);
 	shdata->_environ[i + 1] = NULL;
 }
-
 /**
  * _setenv - compares env variables names
  * with the name passed.
@@ -77,7 +74,6 @@ int _setenv(shell_data *shdata)
 
 	return (1);
 }
-
 /**
  * _delenv - deletes an environment variable
  *
@@ -129,7 +125,6 @@ int _delenv(shell_data *shdata)
 	shdata->_environ = realloc_environ;
 	return (1);
 }
-
 /**
  * cmp_env_name - compares env variables names
  * with the name passed.
